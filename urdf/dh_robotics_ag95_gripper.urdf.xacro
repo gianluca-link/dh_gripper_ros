@@ -113,21 +113,21 @@
             <kd>1.0</kd>
         </gazebo> 
 
-        <joint name="${prefix}gripper_finger1_finger_joint" type="continuous">
+        <joint name="${prefix}gripper_finger1_finger_joint" type="revolute">
             <parent link="${prefix}gripper_finger1_knuckle_link"/>
             <child link="${prefix}gripper_finger1_finger_link"/>
             <axis xyz="0 -1 0"/>
             <origin xyz="0.0292080077784 0.0 -0.0227132622407" rpy="0 0 0" />
-            <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1"/>
+            <limit lower="-62.83" upper="62.83" velocity="100.0" effort="0.1"/>
             <mimic joint="${prefix}gripper_finger1_joint" multiplier="0.4563942" offset="0"/>
         </joint>
 
-        <joint name="${prefix}gripper_finger2_finger_joint" type="continuous">
+        <joint name="${prefix}gripper_finger2_finger_joint" type="revolute">
             <parent link="${prefix}gripper_finger2_knuckle_link"/>
             <child link="${prefix}gripper_finger2_finger_link"/>
             <axis xyz="0 -1 0"/>
             <origin xyz="0.0292080077784 0.0 -0.0227132622407" rpy="0 0 0" />
-            <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1"/>
+            <limit lower="-62.83" upper="62.83" velocity="100.0" effort="0.1"/>
             <mimic joint="${prefix}gripper_finger1_joint" multiplier="0.4563942" offset="0"/>
         </joint>
 
@@ -187,21 +187,21 @@
             <kd>1.0</kd>
         </gazebo>  
 
-        <joint name="${prefix}gripper_finger1_inner_knuckle_joint" type="continuous">
+        <joint name="${prefix}gripper_finger1_inner_knuckle_joint" type="revolute">
             <parent link="${prefix}gripper_base_link"/>
             <child link="${prefix}gripper_finger1_inner_knuckle_link"/>
             <axis xyz="0 -1 0"/>
             <origin rpy="0.0 0.0 ${pi}" xyz="-0.016 0 0.10586"/>
-            <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1"/>
+            <limit lower="-62.83" upper="62.83" velocity="100.0" effort="0.1"/>
             <mimic joint="${prefix}gripper_finger1_joint" multiplier="1.49462955"  offset="0"/>
         </joint>
 
-        <joint name="${prefix}gripper_finger2_inner_knuckle_joint" type="continuous">
+        <joint name="${prefix}gripper_finger2_inner_knuckle_joint" type="revolute">
             <parent link="${prefix}gripper_base_link"/>
             <child link="${prefix}gripper_finger2_inner_knuckle_link"/>
             <axis xyz="0 -1 0"/>
             <origin rpy="0.0 0.0 0.0" xyz="0.016 0 0.10586"/>
-            <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1"/>
+            <limit lower="-62.83" upper="62.83" velocity="100.0" effort="0.1"/>
             <mimic joint="${prefix}gripper_finger1_joint" multiplier="1.49462955" offset="0"/>
         </joint>
 
@@ -261,21 +261,21 @@
             <kd>1.0</kd>
         </gazebo> 
 
-        <joint name="${prefix}gripper_finger1_finger_tip_joint" type="continuous">
+        <joint name="${prefix}gripper_finger1_finger_tip_joint" type="revolute">
             <parent link="${prefix}gripper_finger1_inner_knuckle_link"/>
             <child link="${prefix}gripper_finger1_finger_tip_link"/>
             <axis xyz="0 1 0"/>
             <origin xyz="0.0394969463769 0.0 0.0382752038125 " rpy="0.0 0.0 0.0"/>
-            <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1"/>
+            <limit lower="-62.83" upper="62.83" velocity="100.0" effort="0.1"/>
             <mimic joint="${prefix}gripper_finger1_joint" multiplier="1.49462955"/>
         </joint>
 
-        <joint name="${prefix}gripper_finger2_finger_tip_joint" type="continuous">
+        <joint name="${prefix}gripper_finger2_finger_tip_joint" type="revolute">
             <parent link="${prefix}gripper_finger2_inner_knuckle_link"/>
             <child link="${prefix}gripper_finger2_finger_tip_link"/>
             <axis xyz="0 1 0"/>
             <origin rpy="0.0 0.0 0.0" xyz="0.0394969463769  0.0 0.0382752038125  "/>
-            <limit lower="-3.14" upper="3.14" velocity="100.0" effort="0.1"/>
+            <limit lower="-62.83" upper="62.83" velocity="100.0" effort="0.1"/>
             <mimic joint="${prefix}gripper_finger1_joint" multiplier="1.49462955"/>
         </joint>
 
